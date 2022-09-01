@@ -20,6 +20,6 @@ def get_vimeo_headers(cookies):
 
     r = requests.get('https://vimeo.com/_rv/viewer', headers=headers)
     jwt_token = r.json()['jwt']
-    headers['Authorization'] = 'jwt ' + jwt_token
+    headers['Authorization'] = f'jwt {jwt_token}'
 
     return cookies, headers

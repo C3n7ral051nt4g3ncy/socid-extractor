@@ -210,8 +210,8 @@ def test_reddit():
     assert info.get('has_user_profile') == 'True'
     assert info.get('created_at').startswith('2018-01-06')
     assert info.get('hide_from_robots') == 'True'
-    assert int(info.get('total_karma')) > int(30000)
-    assert int(info.get('post_karma')) > int(7000)
+    assert int(info.get('total_karma')) > 30000
+    assert int(info.get('post_karma')) > 7000
 
 
 @pytest.mark.github_failed
